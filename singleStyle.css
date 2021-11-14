@@ -1,0 +1,38 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 80px 60px;
+}
+
+.title{
+    font-size: var(--fs-big);
+}
+.title.black{
+    color: #000;
+}
+.title.white{
+    color: #fff;
+}
+
+.sub_title{
+    font-size: var(--fs-small);
+    font-weight: 300;
+    font-family: var(--ff-rubik);
+
+    margin-top: 40px;
+
+    line-height: 130%;
+}
+.sub_title.black{
+    color: #000;
+}
+.sub_title.white{
+    color: #fff;
+}
