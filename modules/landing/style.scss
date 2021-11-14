@@ -1,0 +1,287 @@
+
+
+$nav-height: 70px;
+$nav-bg_color: var(--bg1-color);
+
+$nav-links_line_height: 2px;
+$nav-links_line_padding: 6px;
+$nav-links_line_transition: 0.4s;
+
+$nav-links_line_color: #ffffff;
+
+
+
+
+
+$header-title_padding_left: 30px;
+
+#header{
+    background-color: var(--second-color);
+    background-image: url(https://kartinkin.net/uploads/posts/2021-07/1626824590_7-kartinkin-com-p-chernii-melovannii-fon-krasivo-7.jpg);
+    background-size: cover;
+    background-position: center;
+    #nav{
+        width: 100%;
+        
+        background: $nav-bg_color;
+
+        color: #ffffff;
+        
+        .container{
+            height: $nav-height;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 10px 20px;
+            
+            .nav_links a{
+                position: relative;
+
+                margin-left: 60px;
+
+                color: $nav-links_line_color;
+
+                cursor: pointer;
+
+                font-size: var(--fs-small);
+
+                padding: $nav-links_line_padding;
+
+                overflow: hidden;
+            }
+            .nav_links a::after{
+                content: '';
+                width: 0;
+                height: $nav-links_line_height;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #ffffff;
+
+                transition: $nav-links_line_transition;
+            }
+            .nav_links a::before{
+                content: '';
+                width: 0;
+                height: $nav-links_line_height;
+
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                background-color: #ffffff;
+
+                transition: $nav-links_line_transition;
+            }
+            .nav_links a:hover:after{
+                width: 100%;
+            }
+            .nav_links a:hover:before{
+                width: 100%;
+            }
+        }
+    }
+    
+    .header_content{
+        .header_main{
+            padding: 160px 0;
+            p{
+                color: #fff;
+    
+                line-height: 1.5;
+                letter-spacing: 4px;
+                
+                border-left: var(--txt1-color) 3px solid;
+
+                font-family: var(--ff-oswald);
+
+                padding-left: $header-title_padding_left;
+            }
+            .header_main__title{
+                font-size: var(--fs-large);
+            }
+            .header_main__sub_title{
+                margin-top: 40px;
+                font-size: var(--fs-small);
+            }
+        }
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+#advantage{
+    background-color: var(--bg2-color);
+    
+
+    
+    .advantage_list{
+        // background-color: #444;
+        
+        padding: 100px 0 0 0;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-weight: 300;
+
+        
+        .advantage_card{
+            transition: .4s;
+
+            min-height: 500px;
+            width: 400px;
+
+            background-color: var(--bg3-color);
+
+            color: var(--txt2-color);
+            
+            .advantage_card__img{
+                background-color: #777;
+                height: 200px;
+            }
+            .advantage_card__title_container{
+                
+                padding: 30px;
+                
+                .advantage_card__title{
+                    font-size: var(--fs-normal);
+                    font-family: var(--ff-robotoSlab);
+                }
+            }
+            .advantage_card__info_container{
+                
+                padding: 0 30px 30px 30px;
+                .advantage_card__info{
+                    font-size: var(--fs-small);
+                    font-family: var(--ff-rubik);
+
+                    line-height: 130%;
+                }
+            }
+        }
+        .advantage_card:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #advantage{
+        .advantage_list{
+            display: flex;
+            
+            flex-direction: column-reverse;
+            row-gap: 60px;
+
+            .advantage_card{
+                width: 100%;
+                max-width: 700px;
+            }
+        }
+     }
+}
+
+#about{
+    background-color: var(--txt1-color);
+    
+    color: var(--txt3-color);
+    font-weight: 400;
+}
+
+#location{
+    background-color: var(--bg2-color);
+    
+    color: var(--txt2-color);
+    
+    .location_map{
+        width: 100%;
+        height: 580px;
+        
+        margin: 60px 0 0 0;
+    }
+}
+#prices{
+    background-color: var(--bg2-color);
+    
+    color: var(--txt2-color);
+    .list{
+        margin-top: 60px;
+        
+        list-style-type: none;
+        
+        width: 100%;
+        max-width: 800px;
+        
+        display: grid;
+        row-gap: 40px;
+        .list_item{
+            font-size: var(--fs-small);
+            
+            display: flex;
+            align-items: center;
+            
+            column-gap: 10px;
+            
+            padding: 5px 0 5px 20px;
+            
+            border-left: var(--txt1-color) 3px solid;
+            
+            .price_line{
+                display: inline-block;
+                height: 2px;
+                width: 20px; 
+                
+                background-color: #fff;
+            }
+            
+        }
+    }
+}
+footer{
+    background-color: var(--bg3-color);
+    
+    color: var(--txt2-color);
+    
+    font-size: var(--fs-small);
+    
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+
+    }
+    .link_list{
+        display: grid;
+        row-gap: 40px;
+        .link_item{
+
+            position: relative;
+
+            padding-left: 60px;
+            
+            i{
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    .phone_list{
+
+
+        .phone_item{
+            margin-bottom: 40px;
+        }
+    }
+}
